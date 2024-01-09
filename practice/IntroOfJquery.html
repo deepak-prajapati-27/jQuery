@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro to jQuery</title>
+  </head>
+  <body>
+    <h3>There are two ways to link jQuery</h3>
+    <p>By downloading jQuery and linking it with script src</p>
+    <p>By giving cdn link to</p>
+
+    <!-- this is the first way of linking it -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- this is the cdn link to link the jQuery -->
+
+    <h3>$ = to jQuery</h3>
+
+    <!-- if your jQuery is linked and you write in console $ then a propmt will arrive (ƒ $() { [native code] }) -->
+
+    <h3>Format to write jQuery</h3>
+    <!-- <script src="../js/jquery-3.7.1.min.js"></script> -->
+    <script>
+      console.log($);
+    </script>
+
+    <!-- syntax to write jQuery -->
+    <script>
+      $(document).ready(function () {
+        // $(Selector).action(function () {
+        //   // Code to be executed
+        // });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Mouse Event</h1>
+    <div class="box">
+      <h3>hello everyone</h3>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit,
+        culpa.
+      </p>
+    </div>
+
+    <!-- script -->
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("body").css({
+          backgroundColor: "purple",
+          color: "whiteSmoke",
+          textAlign: "center",
+        });
+        $("h1").css({
+          backgroundColor: "black",
+          color: "",
+        });
+        $(".box").css({
+          backgroundColor: "orange",
+          color: "green",
+          height: "200px",
+          width: "400px",
+          margin: "0 auto",
+        });
+      });
+    </script>
+  </body>
+</html>
