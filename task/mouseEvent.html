@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Mouse Event</title>
   </head>
   <body>
     <h1>Mouse Event</h1>
@@ -18,6 +18,8 @@
     <!-- script -->
 
     <script src="../js/jquery-3.7.1.min.js"></script>
+
+    <!-- css script -->
 
     <script>
       $(document).ready(function () {
@@ -36,6 +38,95 @@
           height: "200px",
           width: "400px",
           margin: "0 auto",
+          padding: "50px",
+        });
+      });
+    </script>
+
+    <!-- jQuery -->
+
+    <script>
+      // mouse enter event
+
+      $(document).ready(function () {
+        $(".box").mouseenter(function () {
+          $(".box").css({
+            backgroundColor: "pink",
+            color: "red",
+            height: "300px",
+            width: "600px",
+            fontSize: "30px",
+          });
+        });
+
+        // mouse leave event
+
+        $(".box").mouseleave(function () {
+          $(".box").css({
+            backgroundColor: "green",
+            color: "purple",
+            height: "250px",
+            width: "500px",
+            fontSize: "40px",
+          });
+        });
+
+        //mousedown
+
+        $(".box").mousedown(function () {
+          $(".box").css({
+            backgroundColor: "blue",
+            color: "black",
+            height: "250px",
+            width: "500px",
+            fontSize: "40px",
+          });
+        });
+
+        //mousemove      mousemove and mouseenter are same
+
+        // $(".box").mousemove(function () {
+        //   $(".box").css({
+        //     backgroundColor: "black",
+        //     color: "whiteSmoke",
+        //     height: "250px",
+        //     width: "500px",
+        //     fontSize: "40px",
+        //   });
+        // });
+
+        //mouseout       mouseout and mouseleave are same
+
+        // $(".box").mouseout(function () {
+        //   $(".box").css({
+        //     backgroundColor: "grey",
+        //     color: "black",
+        //     height: "250px",
+        //     width: "500px",
+        //     fontSize: "40px",
+        //   });
+        // });
+
+        //mouseover
+
+        // $(".box").mouseover(function () {
+        //   $(".box").css({
+        //     backgroundColor: "red",
+        //     color: "black",
+        //     height: "250px",
+        //     width: "500px",
+        //     fontSize: "40px",
+        //   });
+        // });
+
+        $(".box").mouseup(function () {
+          $(".box").css({
+            backgroundColor: "red",
+            color: "black",
+            height: "250px",
+            width: "500px",
+            fontSize: "40px",
+          });
         });
       });
     </script>

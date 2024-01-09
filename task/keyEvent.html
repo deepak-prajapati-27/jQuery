@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Key Event</title>
+  </head>
+  <body>
+    <h1>Key Event</h1>
+    <div class="box">
+      <h3>hello</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, ullam.
+      </p>
+    </div>
+    <input type="text" name="" id="" />
+    <!-- jQuery link -->
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+
+    <!-- jQuery css -->
+
+    <script>
+      $(document).ready(function () {
+        $("body").css({
+          backgroundColor: "black",
+          color: "khaki",
+          textAlign: "center",
+          margin: "0 auto",
+          padding: "100px",
+        });
+        $(".box").css({
+          backgroundColor: "khaki",
+          color: "black",
+          width: "400px",
+          height: "300px",
+          textAlign: "center",
+          margin: "0 auto",
+          border: "10px dashed red",
+        });
+        $("input").css({
+          backgroundColor: "pink",
+          color: "black",
+          width: "200px",
+          height: "30px",
+          textAlign: "center",
+          margin: "10px ",
+          border: "5px solid purple",
+        });
+      });
+
+      //   jQuery script
+
+      //mousedown
+
+      $(document).ready(function () {
+        $("body").mousedown(function () {
+          $("body").css({
+            backgroundColor: "grey",
+            color: "purple",
+          });
+        });
+
+        //keyup
+
+        $("input").keyup(function () {
+          $(".box").css({
+            backgroundColor: "purple",
+            color: "yellow",
+            fontSize: "40px",
+            width: "500px",
+            height: "400px",
+            border: "5px solid red",
+          });
+          $("p").html("Keep Writing");
+        });
+
+        // keydown
+
+        $("input").keydown(function () {
+          $(".box").css({
+            backgroundColor: "pink",
+            color: "red",
+            fontSize: "30px",
+            width: "500px",
+            height: "400px",
+            border: "5px solid black",
+          });
+          $("p").html("hello coder");
+        });
+
+        //keypress       keypress and keyup are the same
+
+        // $("input").keypress(function () {
+        //   $(".box").css({
+        //     backgroundColor: "red",
+        //     color: "pink",
+        //     fontSize: "30px",
+        //     width: "500px",
+        //     height: "400px",
+        //     border: "5px solid black",
+        //   });
+        //   $("p").html("hello coder");
+        // });
+      });
+    </script>
+  </body>
+</html>
