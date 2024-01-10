@@ -3,67 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Key In JQuery</title>
+    <title>Fade Effect in jQuery</title>
   </head>
   <body>
-    <h1>Key Event In JQuery</h1>
-    <hr />
-    <input type="text" />
-    <hr />
-    <div class="box">This is The Magic of jQuery</div>
+    <h1>Fade Effect in jQuery</h1>
 
-    <!-- JQuery script -->
+    <div class="wrapper">
+      <button class="btnFadeIn">Fade In</button>
+      <button class="btnFadeOut">Fade Out</button>
+      <button class="btnFadeToggle">Fade Toggle</button>
+      <button class="btnFadeTo">Fade To</button>
+    </div>
+    <div class="box">This is Box</div>
+
+    <!-- jquery is added here  -->
 
     <script src="../js/jquery-3.7.1.min.js"></script>
 
-    <!-- script css  -->
+    <!-- script  -->
 
     <script>
+      $("*").css({
+        padding: "0px",
+        margin: "0px ",
+        boxSizing: "border-box",
+      });
       $("body").css({
         backgroundColor: "tan",
+        color: "khaki",
+        fontSize: "30px",
+      });
+      $("h1").css({
+        color: "brown",
+        fontSize: "50px",
+      });
+
+      $(".box").css({
+        width: "150px",
+        height: "150px",
+        margin: "auto",
+        border: "1px solid black",
+        backgroundColor: "brown",
+        color: "khaki",
+        fontSize: "30px",
+      });
+      $(".wrapper").css({
         textAlign: "center",
       });
       $("button").css({
-        backgroundColor: "brown",
-        color: "khaki",
         padding: "10px 30px",
-        margin: "10px",
-      });
-      $(".box").css({
+        margin: "10px ",
+        border: "1px solid black",
         backgroundColor: "crimson",
-        textAlign: "center",
-        fontSize: "20px",
         color: "khaki",
-        height: "150px",
-        borderRadius: "30px",
-        border: "5px solid blue",
-        outline: "5px dashed green",
+        fontSize: "30px",
       });
     </script>
 
-    <!-- script -->
-
     <script>
       $(document).ready(function () {
-        // key up
-
-        $("input").keyup(function () {
-          $(".box").css({ backgroundColor: "blue" });
-          $("body").css({ backgroundColor: "purple", color: "white" });
+        $(".btnFadeIn").click(function () {
+          $(".box").fadeIn(5000);
         });
-
-        // key down
-
-        $("input").keydown(function () {
-          $(".box").css({ backgroundColor: "green" });
-          $("body").css({ backgroundColor: "blueviolet", color: "white" });
+        $(".btnFadeOut").click(function () {
+          $(".box").fadeOut(3000);
         });
-
-        // key press
-
-        // $("input").keypress(function () {
-        //  $('.box').css({backgroundColor: 'yellow', color: 'blue'})
-        // });
+        $(".btnFadeToggle").click(function () {
+          $(".box").fadeToggle(2000);
+          // $('.box').fadeToggle("slow", "linear" )
+        });
+        $(".btnFadeTo").click(function () {
+          $(".box").fadeTo(3000, 0.5);
+        });
       });
     </script>
   </body>

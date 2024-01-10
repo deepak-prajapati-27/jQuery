@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FADE EFFECT IN JQUERY</title>
+  </head>
+  <body>
+    <button class="btnFadeIn">Fade In</button>
+    <button class="btnFadeOut">Fade Out</button>
+    <button class="btnFadeToggle">Fade Toggle</button>
+    <button class="btnFadeTo">Fade To</button>
+    <div class="box">
+      <h1 class="h1">FADE EFFECT IN JQUERY</h1>
+      <img src="../images/images (9).png" alt="" class="img" />
+    </div>
+
+    <!-- jQuery link -->
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+
+    <!-- jQuery css -->
+
+    <script>
+      //   $(document).ready(function () {
+      $("body").css({
+        backgroundColor: "black",
+        color: "khaki",
+        textAlign: "center",
+      });
+      $("button").css({
+        backgroundColor: "pink",
+        color: "purple",
+        width: "200px",
+        height: "50px",
+        fontSize: "20px",
+        fontWeight: "800",
+        marginTop: "100px",
+      });
+      $(".box").css({
+        margin: "50px",
+      });
+      //   });
+    </script>
+
+    <!-- jQuery Script -->
+
+    <script>
+      $(document).ready(function () {
+        $(".btnFadeIn").click(function () {
+          $(".box").fadeIn(2000);
+        });
+
+        $(".btnFadeOut").click(function () {
+          $(".box").fadeOut(2000);
+        });
+
+        $(".btnFadeToggle").click(function () {
+          $(".box").fadeToggle(2000);
+        });
+        $(".btnFadeTo").click(function () {
+          $(".img").fadeTo(2000, 0.5);
+        });
+      });
+    </script>
+  </body>
+</html>

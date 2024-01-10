@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SLIDE EFFECT IN JQUERY</title>
+  </head>
+  <body>
+    <button class="slideUp">Slide Up</button>
+    <button class="slideDown">Slide Down</button>
+    <button class="slideToggle">Slide Toggle</button>
+
+    <div class="box">
+      <h1>Slide Effect</h1>
+      <img src="../images/download (5).png" alt="" />
+    </div>
+
+    <!-- jQuery link  -->
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+
+    <!-- jQuery css  -->
+
+    <script>
+      $("body").css({
+        textAlign: "center",
+        backgroundColor: "crimson",
+      });
+      $("button").css({
+        backgroundColor: "purple",
+        color: "white",
+        width: "200px",
+        height: "50px",
+        borderRadius: "40px",
+        margin: "10px",
+        marginTop: "50px",
+        border: " 5px solid black",
+      });
+    </script>
+
+    <!-- jQuery script   -->
+
+    <script>
+      $(document).ready(function () {
+        // slide up
+
+        $(".slideUp").click(function () {
+          $(".box").slideUp();
+        });
+
+        // slide down
+
+        $(".slideDown").click(function () {
+          $(".box").slideDown();
+          // $(".slideUp").slideUp();
+        });
+
+        // slide toggle
+
+        $(".slideToggle").click(function () {
+          $(".box").slideToggle();
+          // $(".slideUp").slideDown();
+        });
+      });
+    </script>
+  </body>
+</html>
