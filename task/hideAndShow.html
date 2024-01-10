@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hide And Show In jQuery</title>
+  </head>
+  <body>
+    <div class="box">
+      <img src="../images/images (9).png" alt="" />
+      <h3>HELLO MOTA BHAI</h3>
+    </div>
+    <button class="btnhide">HIDE</button>
+    <button class="btnshow">SHOW</button>
+    <button class="btntoggle">TOGGLE</button>
+
+    <!-- jQuery link  -->
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+
+    <!-- jQuery css -->
+    <script>
+      $(document).ready(function () {
+        $("body").css({
+          backgroundColor: "grey",
+          color: "white",
+          margin: "100px",
+          textAlign: "center",
+        });
+        $("button").css({
+          width: "200px",
+          height: "50px",
+          backgroundColor: "black",
+          color: "khaki",
+          fontSize: "20px",
+          borderRadius: "30px",
+          border: "5px solid purple",
+          margin: "30px 10px",
+          cursor: "pointer",
+          //   position: "fixed",
+          top: "500px",
+        });
+        $(".box").css({
+          backgroundColor: "black",
+          height: "400px",
+          width: "800px",
+          margin: "0 auto",
+          borderRadius: "50px 50px 0px 50px ",
+        });
+        $("img").css({
+          margin: "50px",
+          borderRadius: "30px",
+        });
+      });
+    </script>
+
+    <!-- jQuery script -->
+
+    <script>
+      $(document).ready(function () {
+        //hide button
+
+        $(".btnhide").click(function () {
+          $(".box").hide();
+        });
+
+        //show button
+
+        $(".btnshow").click(function () {
+          $(".box").show();
+        });
+
+        //toggle button
+
+        $(".btntoggle").click(function () {
+          $(".box").toggle();
+        });
+      });
+    </script>
+  </body>
+</html>
