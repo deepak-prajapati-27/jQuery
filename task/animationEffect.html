@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANIMATION EFFECT</title>
+  </head>
+  <body>
+    <button class="btn">Animation</button>
+    <div class="main">
+      <div class="box">
+        <h1>Animation jQuery</h1>
+        <p>Hello this is Animation</p>
+      </div>
+      <div class="box-1">
+        <h1>Animation jQuery</h1>
+        <p>Hello this is Animation</p>
+      </div>
+    </div>
+    <!-- jQuery link  -->
+
+    <script src="../js/jquery-3.7.1.min.js"></script>
+
+    <!-- jQuery css  -->
+
+    <script>
+      $("body").css({
+        textAlign: "center",
+      });
+      $(".main").css({
+        display: "flex",
+        position: "relative",
+      });
+      $(".btn").css({
+        backgroundColor: "skyBlue",
+        height: "70px",
+        width: "250px",
+        border: " 5px solid black",
+        margin: "50px 0",
+        fontSize: "20px",
+        borderRadius: "50px",
+      });
+      $(".box").css({
+        width: "500px",
+        height: "200px",
+        // textAlign: "center",
+        // margin: "auto auto",
+        backgroundColor: "black",
+        color: "red",
+        padding: "100px",
+        fontSize: "20px",
+      });
+
+      $(".box-1").css({
+        width: "500px",
+        height: "200px",
+        // textAlign: "center",
+        margin: "auto 20%",
+        backgroundColor: "black",
+        color: "red",
+        padding: "100px",
+        fontSize: "20px",
+        position: "absolute",
+        right: "-305px",
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $(".btn").click(function () {
+          $(".box").animate(
+            {
+              marginLeft: "400px",
+              fontSize: "30px",
+              borderRadius: "50%",
+            },
+            2000
+          );
+        });
+        $(".btn").click(function () {
+          $(".box-1").animate(
+            {
+              marginRight: "700px",
+              fontSize: "30px",
+              borderRadius: "50%",
+            },
+            2000
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
